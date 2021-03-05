@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Costumers" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7344c07-749f-4a0c-abfe-a7fc3b9ac3c0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select name, address, city, phone, since from customers]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="city"/>
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="since" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="since"/>
+		<property name="com.jaspersoft.studio.field.label" value="since"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="15" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="10" width="100" height="30" uuid="7eb3ed57-da5b-4a5b-afe2-593302c15a5f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Relatório"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="53" width="547" height="1" uuid="721fddbb-f0a8-4848-b515-f14bdaf1721c"/>
+			</line>
+			<image>
+				<reportElement x="34" y="3" width="46" height="50" uuid="bc65fbc1-02fd-4cf4-ac55-cf5bdff44c53"/>
+				<imageExpression><![CDATA["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="969b72d6-706a-4a42-84bb-3eca2fff31b8"/>
+				<textFieldExpression><![CDATA["Nome"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="7" width="100" height="30" uuid="c7f8606f-16b0-413b-a323-76031af3c890"/>
+				<textFieldExpression><![CDATA["Telefone"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="7" width="100" height="30" uuid="8206ad84-997f-42c4-a521-118180d11577"/>
+				<textFieldExpression><![CDATA["Cidade"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="7" width="100" height="30" uuid="fd7d178f-9937-42d2-b886-888ee69719df"/>
+				<textFieldExpression><![CDATA["Since"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="7" width="100" height="30" uuid="56caadb3-f63e-4c75-aae3-c1c662ed2354"/>
+				<textFieldExpression><![CDATA["Endereço"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="2" width="100" height="30" uuid="789882e1-3324-43e2-8163-895113ab6244"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="3" width="100" height="30" uuid="d7f376b4-751e-4779-a72e-48707f21b758"/>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="3" width="100" height="30" uuid="aadccbfb-ea14-4b00-b25f-2df9494f68f5"/>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="3" width="100" height="30" uuid="fe857e03-a3ee-4b14-a623-cb411842c39c"/>
+				<textFieldExpression><![CDATA[$F{since}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="3" width="100" height="30" uuid="334f4bb5-e4c8-4683-8a7c-8cd32a9325dd"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="-4" y="3" width="100" height="30" uuid="24a2a230-b013-4fe5-b93f-ee3536768862"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="0" width="110" height="30" uuid="4f91812f-f864-4c26-b81e-4d0cd1459d55"/>
+				<text><![CDATA[Layout -Renato Lucena]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
